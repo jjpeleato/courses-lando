@@ -1,0 +1,66 @@
+############################
+# Ignore files/directories #
+############################
+/.idea
+/.env
+
+############
+# Sitemaps #
+############
+public/sitemap.backup.xml
+public/sitemap.backup.xml.gz
+public/sitemap_index.xml
+public/sitemap.xml
+public/sitemap.xml.gz
+
+#############################
+# Logs, databases and misc. #
+#############################
+*.log
+*.sql
+*.sqlite
+*.sass-cache
+.bash_history
+.bash_logout
+.bashrc
+.cache
+.profile
+.mysql_history
+
+############
+# Packages #
+############
+*.7z
+*.dmg
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.bat
+
+###################
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+###################
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+
+######################
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.lock
