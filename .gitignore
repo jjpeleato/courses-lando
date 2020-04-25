@@ -76,3 +76,15 @@ example1/wp-content/plugins/hello.php
 example1/.htaccess
 example1/license.txt
 example1/readme.html
+
+#############
+# Example 2 #
+#############
+example2/public/wp-config.php
+example2/public/wp-content/cache
+example2/public/wp-content/upgrade
+example2/public/wp-content/uploads
+example2/public/wp-content/plugins/hello.php
+example2/public/.htaccess
+example2/public/license.txt
+example2/public/readme.html
