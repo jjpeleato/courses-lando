@@ -1,0 +1,34 @@
+name: example3
+
+# See: https://docs.lando.dev/config/lamp.html
+recipe: lamp
+config:
+  php: '5.6'
+  webroot: .
+  database: mariadb
+  config:
+    php: private/config/php/php.ini
+
+# See: https://docs.lando.dev/config/proxy.html
+proxy:
+  appserver:
+    - web.example3.lndo.site
+  database:
+    - db.example3.lndo.site
+  pma:
+    - pma.example3.lndo.site
+
+# See: https://docs.lando.dev/config/services.html
+services:
+  appserver:
+    run_as_root:
+      - "chown www-data: -R /app"
+  database:
+    portforward: 3318
+    creds:
+      user: lamp
+      password: lamp
+      database: lamp
+  pma:
+    type: phpmyadmin
+    hosts: database

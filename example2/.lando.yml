@@ -1,0 +1,32 @@
+name: example2
+
+# See: https://docs.lando.dev/config/wordpress.html
+recipe: wordpress
+config:
+  php: '7.4'
+  webroot: public
+  database: mariadb
+
+# See: https://docs.lando.dev/config/proxy.html
+proxy:
+  appserver:
+    - web.example2.lndo.site
+  database:
+    - db.example2.lndo.site
+  pma:
+    - pma.example2.lndo.site
+
+# See: https://docs.lando.dev/config/services.html
+services:
+  appserver:
+    run_as_root:
+      - "chown www-data: -R /app"
+  database:
+    portforward: 3318
+    creds:
+      user: lamp
+      password: lamp
+      database: lamp
+  pma:
+    type: phpmyadmin
+    hosts: database

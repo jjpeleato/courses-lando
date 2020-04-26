@@ -1,0 +1,4 @@
+name: example1
+
+# See: https://docs.lando.dev/config/wordpress.html
+recipe: wordpress
