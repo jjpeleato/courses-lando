@@ -1,0 +1,38 @@
+name: example4
+
+# See: https://docs.lando.dev/config/proxy.html
+proxy:
+  appserver_nginx:
+    - web.example4.lndo.site
+  appserver:
+    - php.example4.lndo.site
+  node:
+    - node.example4.lndo.site
+
+# See: https://docs.lando.dev/config/services.html
+services:
+  appserver:
+    type: php:7.4
+    via: nginx
+    ssl: true
+    xdebug: true
+    webroot: public
+    run_as_root:
+      - "chown www-data: -R /app"
+  node:
+    type: node
+    globals:
+      npm: "latest"
+      yarn: "latest"
+      gulp-cli: "latest"
+
+# See: https://docs.lando.dev/config/tooling.html
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+  gulp:
+    service: node
+  composer:
+    service: appserver

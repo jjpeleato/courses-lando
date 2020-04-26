@@ -1,0 +1,24 @@
+{
+    "name": "example4",
+    "version": "0.0.0",
+    "description": "Base repository for any project.",
+    "keywords": [
+        "lando",
+        "node",
+        "npm",
+        "yarn"
+    ],
+    "homepage": "https://www.jjpeleato.com/",
+    "author": "@jjpeleato",
+    "license": "GPL-2.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jjpeleato/courses-lando.git"
+    },
+    "dependencies": {
+        "jquery": "^3.4.1"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "jjpeleato/wp-starter-boilerplate",
+    "description": "WordPress base repository for any project.",
+    "keywords": ["lando", "WordPress", "deployer", "psr1", "psr2"],
+    "homepage": "https://github.com/jjpeleato/wp-starter-boilerplate.git",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "José J. Peleato Pradel",
+            "homepage": "https://www.jjpeleato.com/"
+		}
+    ],
+    "require": {
+        "php": "^7.3.0",
+        "vlucas/phpdotenv": "^3.3"
+    },
+    "require-dev": {
+        "deployer/deployer": "^6.4"
+    },
+    "config": {
+        "process-timeout" : 0,
+		"optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+		"test": [
+			"phpunit"
+		]
+	},
+	"extra": {
+		"scripts-description": {
+			"test": "Run unit tests"
+		}
+	}
+}
