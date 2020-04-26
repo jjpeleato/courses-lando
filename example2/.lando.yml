@@ -15,3 +15,18 @@ proxy:
     - db.example2.lndo.site
   pma:
     - pma.example2.lndo.site
+
+# See: https://docs.lando.dev/config/services.html
+services:
+  appserver:
+    run_as_root:
+      - "chown www-data: -R /app"
+  database:
+    portforward: 3318
+    creds:
+      user: lamp
+      password: lamp
+      database: lamp
+  pma:
+    type: phpmyadmin
+    hosts: database
