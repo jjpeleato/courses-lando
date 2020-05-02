@@ -2,7 +2,7 @@
     "name": "jjpeleato/wp-starter-boilerplate",
     "description": "WordPress base repository for any project.",
     "keywords": ["lando", "WordPress", "deployer", "psr1", "psr2"],
-    "homepage": "https://github.com/jjpeleato/wp-starter-boilerplate.git",
+    "homepage": "https://github.com/jjpeleato/courses-lando.git",
     "license": "GPL-2.0",
     "authors": [
         {
