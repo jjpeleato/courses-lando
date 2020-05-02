@@ -1,0 +1,80 @@
+name: example5
+
+# See: https://docs.devwithlando.io/tutorials/wordpress.html
+recipe: lamp
+config:
+  php: '7.4'
+  webroot: public
+  database: mariadb
+  xdebug: true
+
+# See: https://docs.devwithlando.io/config/proxy.html
+proxy:
+  appserver:
+    - web.example5.lndo.site
+  node:
+    - node.example5.lndo.site
+  database:
+    - db.example5.lndo.site
+  mailhog:
+    - mail.example5.lndo.site
+  pma:
+    - pma.example5.lndo.site
+
+# See: https://docs.devwithlando.io/config/services.html
+services:
+  appserver:
+    run_as_root:
+      - "chown www-data: -R /app"
+  node:
+    type: node
+    globals:
+      npm: "latest"
+      yarn: "latest"
+      gulp-cli: "latest"
+  database:
+    portforward: 3308
+    creds:
+      user: lamp
+      password: lamp
+      database: lamp
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: 1026
+  pma:
+    type: phpmyadmin
+    hosts: database
+
+# See: https://docs.devwithlando.io/config/tooling.html
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+  yarn:
+    service: node
+  gulp:
+    service: node
+  dep:
+    service: appserver
+    desription: run deployer commands
+    cmd:
+      - "vendor/bin/dep"
+  phpcs:
+    service: appserver
+    desription: "Analyze code against the WordPress coding standards with PHP_CodeSniffer"
+    cmd:
+      - "vendor/bin/phpcs"
+  phpcbf:
+    service: appserver
+    desription: "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+    cmd:
+      - "vendor/bin/phpcbf"
+
+# See: https://docs.devwithlando.io/config/events.html
+events:
+  post-start:
+    - appserver: cd $LANDO_MOUNT && composer install
+    - node: cd $LANDO_MOUNT && npm install --save-dev

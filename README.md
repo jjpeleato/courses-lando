@@ -27,6 +27,7 @@ https://www.jjpeleato.com/courses/lando/
 - Example 2: In the second example you can see a basic WordPress recipe, proxy system, custom services like PhpMyAdmin and custom webroot.
 - Example 3: In the third example you can see a basic WordPress recipe, proxy system, custom config to PHP and older version, custom services like PhpMyAdmin and custom webroot.
 - Example 4: In the fourth example you can see a LandoFile without recipe, a basic config with Nginx, PHP 7.4, Node.js, npm, gulp and composer.
+- Example 5: In the fifth example you can see the most complete LandoFile. The environment uses the following services and tools: Apache 2.4, PHP 7.4, Composer, PHP_CodeSniffer, Node.js, NPM, Yarn, Gulp, MariaDB, Mailhog, PhpMyAdmin and Deployer.
 
 ### Plus
 
