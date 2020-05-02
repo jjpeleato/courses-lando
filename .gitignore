@@ -96,3 +96,11 @@ example4/node_modules
 example4/vendor
 example4/composer.lock
 example4/package-lock.json
+
+#############
+# Example 5 #
+#############
+example5/node_modules
+example5/vendor
+example5/composer.lock
+example5/package-lock.json

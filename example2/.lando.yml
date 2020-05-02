@@ -24,9 +24,9 @@ services:
   database:
     portforward: 3318
     creds:
-      user: lamp
-      password: lamp
-      database: lamp
+      user: wordpress
+      password: wordpress
+      database: wordpress
   pma:
     type: phpmyadmin
     hosts: database

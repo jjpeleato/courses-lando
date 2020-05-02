@@ -1,5 +1,5 @@
 {
-    "name": "jjpeleato/example4",
+    "name": "jjpeleato/example5",
     "description": "Code examples for WordCamp Spain Online 2020.",
     "keywords": ["lando"],
     "homepage": "https://github.com/jjpeleato/courses-lando.git",
@@ -15,14 +15,20 @@
         "vlucas/phpdotenv": "^3.3"
     },
     "require-dev": {
-        "deployer/deployer": "^6.4"
-    },
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+		"deployer/deployer": "^6.7",
+		"roave/security-advisories": "dev-master",
+		"slevomat/coding-standard": "^6.1",
+		"squizlabs/php_codesniffer": "^3.5"
+	},
     "config": {
         "process-timeout" : 0,
 		"optimize-autoloader": true,
         "sort-packages": true
     },
     "scripts": {
+		"cs": "phpcs",
+		"cs:fix": "phpcbf",
 		"test": [
 			"phpunit"
 		]

@@ -23,7 +23,6 @@ services:
     type: node
     globals:
       npm: "latest"
-      yarn: "latest"
       gulp-cli: "latest"
 
 # See: https://docs.lando.dev/config/tooling.html
