@@ -45,6 +45,9 @@ lando init \
 # Start it up
 lando start
 
+# Create WP-CONFIG with WP-CLI
+lando wp config create --path=wordpress --dbhost=database --dbname=wordpress --dbuser=wordpress --dbpass=wordpress --dbprefix=lando_
+
 # List information about this app.
 lando info
 ```

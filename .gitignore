@@ -104,3 +104,9 @@ example5/node_modules
 example5/vendor
 example5/composer.lock
 example5/package-lock.json
+
+########
+# PLUS #
+########
+plus/wordpress
+plus/.lando.yml
